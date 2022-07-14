@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+    <title>Home</title>
+    <meta name="theme-color" content="#0d0072"/>
+    <link rel="manifest" href="assets/js/web.webmanifest">
+    <link rel="apple-touch-icon" href="assets/img/icon.png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header id="headers"></header>
+    <div class="container">
+        <div class="judul">
+
+        </div>
+        <div class="form-group">
+        <div class="sambutan">
+
+        </div>
+        <hr>
+        </div>
+        <div class="row segitiga">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <h6>Menghitung Luas Segitiga</h6>
+                            <hr>
+                            <label for=""><strong>Alas</strong></label>
+                            <input type="number" class="form-control alas" placeholder="Masukan Alas">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Tinggi</strong></label>
+                            <input type="number" class="form-control tinggi" placeholder="Masukan Tinggi">
+                        </div>
+                        <div class="form-group">
+                            <h6 class="mt-3">Menghitung Keliling</h6>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4 col-4">
+                                    <input type="number" class="form-control s-1" placeholder="Sisi 1">
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <input type="number" class="form-control s-2" placeholder="Sisi 2">
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <input type="number" class="form-control s-3" placeholder="Sisi 3">
+                                </div>
+                            </div>
+                        </div>
+                        <button style="background-color: #8260b2;" class="btn result text-light" onclick="result_segitiga()">Hitung</button>
+                        <button class="btn btn-primary" onclick="kembali(1)">Kembali</button>
+                        <div class="result-text mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row persegi">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <h6>Menghitung Luas Persegi Panjang dan Keliling</h6>
+                            <hr>
+                            <label for=""><strong>Sisi</strong></label>
+                            <input type="number" class="form-control sisi-persegi" placeholder="Masukan Sisi">
+                        </div>
+                        <button style="background-color: #8260b2;" class="btn result text-light" onclick="result_persegi()">Hitung</button>
+                        <button class="btn btn-primary" onclick="kembali(2)">Kembali</button>
+                        <div class="result-text-1 mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row lingkaran">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Menghitung Luas Lingkaran</h6>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><strong>Luas Lingkaran</strong></label>
+                            <input type="number" class="form-control j-lingkaran" placeholder="Masukan jari-jari ">
+                        </div>
+                        <h6>Keliling Lingkaran</h6>
+                        <button style="background-color: #8260b2;" class="btn result text-light" onclick="result_lingkaran()">Hitung</button>
+                        <button class="btn btn-primary" onclick="kembali(3)">Kembali</button>
+                        <div class="result-text-2 mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ketupat">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Menghitung Luas Belah Ketupat</h6>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><strong>Diagonal 1</strong></label>
+                            <input type="number" class="form-control d1-ketupat" placeholder="Masukan diagonal 1 ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Diagonal 2</strong></label>
+                            <input type="number" class="form-control d2-ketupat" placeholder="Masukan diagonal 2 ">
+                        </div>
+                        
+                        <h6>Keliling Belah Ketupat</h6>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi AB</strong></label>
+                            <input type="number" class="form-control ab-ketupat" placeholder="Masukan Sisi AB ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi BC</strong></label>
+                            <input type="number" class="form-control bc-ketupat" placeholder="Masukan Sisi BC ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi CD</strong></label>
+                            <input type="number" class="form-control cd-ketupat" placeholder="Masukan Sisi CD ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi DA</strong></label>
+                            <input type="number" class="form-control da-ketupat" placeholder="Masukan Sisi DA ">
+                        </div>
+                        <button style="background-color: #8260b2;" class="btn result text-light" onclick="result_ketupat()">Hitung</button>
+                        <button class="btn btn-primary" onclick="kembali(6)">Kembali</button>
+                        <div class="result-text-10 mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row trapesium">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Menghitung Luas Trapesium</h6>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi Atas</strong></label>
+                            <input type="number" class="form-control sisi-trapesium-1" placeholder="Masukan sisi atas ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi Atas</strong></label>
+                            <input type="number" class="form-control sisi-trapesium-2" placeholder="Masukan sisi bawah ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Tinggi</strong></label>
+                            <input type="number" class="form-control t-trapesium" placeholder="Masukan Tinggi">
+                        </div>
+                        <button style="background-color: #8260b2;" class="btn result text-light" onclick="result_trapesium()">Hitung</button>
+                        <button class="btn btn-primary" onclick="kembali(5)">Kembali</button>
+                        <div class="result-text-8 mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row genjar">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Menghitung Luas Jajar Genjar</h6>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><strong>Alas Jajar Genjar</strong></label>
+                            <input type="number" class="form-control a-genjar" placeholder="Masukan Alas ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Tinggi Jajar Genjar</strong></label>
+                            <input type="number" class="form-control t-genjar" placeholder="Masukan Tinggi ">
+                        </div>
+                        <h6>Menghitung Keliling</h6>
+                        <hr>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi Pertama Jajar Genjar</strong></label>
+                            <input type="number" class="form-control s1-genjar" placeholder="Sisi Pertama ">
+                        </div>
+                        <div class="form-group">
+                            <label for=""><strong>Sisi kedua Jajar Genjar</strong></label>
+                            <input type="number" class="form-control s2-genjar" placeholder="Sisi Kedua">
+                        </div>
+                        <button style="background-color: #8260b2;" class="btn result text-light" onclick="result_genjar()">Hitung</button>
+                        <button class="btn btn-primary" onclick="kembali(4)">Kembali</button>
+                        <div class="result-text-3 mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row kontent">
+            <div class="col-6 mt-3">
+                <div class="card shadow bg-primary text-light"> 
+                    <div class="card-body">
+                        <img width="90" class="" src="assets/img/up.png" alt="" srcset="">
+                        <h5 class="card-title">Segitiga</h5>
+                        <hr>
+                        <button onclick="menu_start(1)" class="btn btn-light">hitung</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mt-3">
+                <div class="card shadow bg-danger text-light"> 
+                  <div class="card-body">
+                    <img width="90" class="" src="assets/img/persegi.png" alt="" srcset="">
+                    <h5 class="card-title">Persegi Panjang</h5>
+                    <hr>
+                    <button onclick="menu_start(2)" class="btn btn-light">hitung</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 mt-3">
+            <div class="card shadow bg-dark text-light"> 
+                <div class="card-body">
+                    <img width="90" class="" src="assets/img/circle.png" alt="" srcset="">
+                    <h5 class="card-title">Lingkaran</h5>
+                    <button onclick="menu_start(3)" class="btn btn-light">hitung</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 mt-3">
+            <div class="card shadow bg-warning text-dark"> 
+                <div class="card-body">
+                    <img width="90" class="" src="assets/img/parallelogram.png" alt="" srcset="">
+                    <h5 class="card-title">Jajar Genjar</h5>
+                    <button onclick="menu_start(4)" class="btn btn-light">hitung</button>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 mt-3">
+                <div class="card shadow bg-light text-dark"> 
+                    <div class="card-body">
+                        <img width="90" class="" src="assets/img/trapezoid.png" alt="" srcset="">
+                        <h5 class="card-title">Trapesium</h5>
+                        <button onclick="menu_start(5)" class="btn btn-dark">hitung </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mt-3 mb-3">
+                <div class="card shadow bg-secondary text-light"> 
+                    <div class="card-body">
+                    <img width="90" class="" src="assets/img/priority.png" alt="" srcset="">
+                    <h5 class="card-title">Belah Ketupat</h5>
+                    <button onclick="menu_start(6)" class="btn btn-light">hitung </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const result_segitiga = () => 
+        {
+            let alas = document.querySelector('.alas').value;
+            let tinggi = document.querySelector('.tinggi').value;
+            document.querySelector('.result-text').innerHTML = `
+            <p>Luas Segitiga adalah  : <strong>${0.5*alas * tinggi} Cm</strong></p>
+            <p>Keliling Segitiga adalah 
+                <strong>${
+                parseFloat(document.querySelector('.s-1').value) + 
+                parseFloat(document.querySelector('.s-2').value) + 
+                parseFloat(document.querySelector('.s-3').value) 
+                }
+                Cm</strong>
+            `;
+        }
+
+        const result_lingkaran = () => 
+        {
+            let jari_jari = document.querySelector('.j-lingkaran').value;
+            document.querySelector('.result-text-2').innerHTML = `
+                Luas Lingkaran : <strong>${Math.ceil((22/7) * jari_jari * jari_jari)}</strong>
+                Keliling Lingkaran : <strong>${Math.ceil(2*(22/7)*jari_jari) }</strong>
+            `
+        }
+        
+        const result_persegi = () =>
+        {
+            let sisi = document.querySelector(".sisi-persegi").value;
+            document.querySelector('.result-text-1').innerHTML = `
+                <p>Luas Persegi Panjang : <strong>${sisi * sisi}</strong></p>
+                <p>Keliling Persegi Panjang : <strong>${sisi * 4}</strong></p>
+            `
+        }
+        const result_trapesium = () => 
+        {
+            let sisi_atas = document.querySelector(".sisi-trapesium-1").value;
+            let sisi_bawah = document.querySelector(".sisi-trapesium-2").value;
+            let tinggi = document.querySelector(".t-trapesium").value;
+            document.querySelector('.result-text-8').innerHTML = `
+                <p>Luas Trapesium : <strong>${((parseFloat(sisi_atas) + parseFloat(sisi_bawah)) / 2) * tinggi}</strong></p>
+            `
+        }
+
+        const result_ketupat = () => 
+        {
+            let d1 = document.querySelector('.d1-ketupat').value;
+            let d2 = document.querySelector('.d2-ketupat').value;
+
+            let ab = document.querySelector('.ab-ketupat').value; 
+            let bc = document.querySelector('.bc-ketupat').value; 
+            let cd = document.querySelector('.cd-ketupat').value; 
+            let da = document.querySelector('.da-ketupat').value;
+
+            document.querySelector('.result-text-10').innerHTML = `
+                <p>Luas Belah Ketupat : <strong>${(0.5) * d1 * d2}</strong></p>
+                <p>Keliling Belah Ketupat : <strong>${parseFloat(ab) + parseFloat(bc) + parseFloat(cd) + parseFloat(da)}</strong></p>
+            `
+        }
+        const result_genjar = () => 
+        {
+           let alas = document.querySelector('.a-genjar').value;
+           let tinggi = document.querySelector('.t-genjar').value;
+           let sisi_1 = document.querySelector('.s1-genjar').value;
+           let sisi_2 = document.querySelector('.s2-genjar').value;
+            document.querySelector('.result-text-3').innerHTML = `
+                <p>Luas Jajar Genjar : <strong>${alas * tinggi}</strong</p>
+                <p>Keliling Jajar Genjar : <strong>${2 * (parseFloat(sisi_1) + parseFloat(sisi_2))}</strong></p>
+            `
+        }
+        const kontent = document.querySelector('.kontent');
+        let judul = document.querySelector('.judul');
+        let sambutan = document.querySelector('.sambutan');
+        let segitiga = document.querySelector('.segitiga');
+        let persegi = document.querySelector('.persegi');
+        let genjar = document.querySelector('.genjar');
+        let lingkaran = document.querySelector('.lingkaran');
+        let trapesium = document.querySelector('.trapesium');
+        let ketupat = document.querySelector('.ketupat');
+        judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+        sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+        const kembali = (id) => 
+        {
+            switch (id) {
+                case 1:
+                    segitiga.style.display = 'none';
+                    kontent.style.visibility = 'visible';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+                    sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+                    break;
+                case 2:
+                    persegi.style.display = 'none';
+                    kontent.style.visibility = 'visible';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+                    sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+                    break;
+                case 3:
+                    lingkaran.style.display = 'none';
+                    kontent.style.visibility = 'visible';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+                    sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+                    break;
+                case 4:
+                    genjar.style.display = 'none';
+                    kontent.style.visibility = 'visible';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+                    sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+                    break;
+                case 5:
+                    trapesium.style.display = 'none';
+                    kontent.style.visibility = 'visible';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+                    sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+                    break;
+                case 6:
+                    ketupat.style.display = 'none';
+                    kontent.style.visibility = 'visible';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Dashboard</h5>'
+                    sambutan.innerHTML = 'Selamat Datang <strong>Mohamad Rizky Isa</strong>'
+                    break;
+                default:
+                    break;
+            }
+        }
+        const menu_start = (id) => 
+        {
+            switch (id) {
+                case 1:
+                    kontent.style.visibility = 'hidden';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Kalkulator Keliling dan Luas Segitiga</h5>'
+                    sambutan.innerHTML = '';
+                    segitiga.style.display = 'block';
+                    break;
+                case 2:
+                    kontent.style.visibility = 'hidden';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Kalkulator Keliling dan Luas Persegi Panjang</h5>'
+                    sambutan.innerHTML = '';
+                    persegi.style.display = 'block';
+                    break;
+                case 3:
+                    kontent.style.visibility = 'hidden';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Kalkulator Keliling dan Luas Lingkaran</h5>'
+                    sambutan.innerHTML = '';
+                    lingkaran.style.display = 'block';
+                    break;
+                case 4:
+                    kontent.style.visibility = 'hidden';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Kalkulator Keliling dan Luas Jajar Genjar</h5>'
+                    sambutan.innerHTML = '';
+                    genjar.style.display = 'block';
+                    break;
+                case 5:
+                    kontent.style.visibility = 'hidden';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Kalkulator Luas Trapesium</h5>'
+                    sambutan.innerHTML = '';
+                    trapesium.style.display = 'block';
+                    break;
+                case 6:
+                    kontent.style.visibility = 'hidden';
+                    judul.innerHTML = '<h5 class="text-muted mt-4 judul">Kalkulator Luas dan keliling Belah Ketupat</h5>'
+                    sambutan.innerHTML = '';
+                    ketupat.style.display = 'block';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+    <script src="assets/js/register.js"></script>
+    <script type="module">
+        import Navbar from './components/Navbar.js'
+        const headers = document.querySelector('#headers');
+        headers.innerHTML = Navbar.navbar;
+    </script>
+</body>
+</html>

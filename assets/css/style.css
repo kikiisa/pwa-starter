@@ -1,0 +1,33 @@
+body {
+   background-color: lightgrey;
+   user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+    overscroll-behavior: contain;
+}
+.row{
+    margin-top: 20px;
+    overflow:auto;
+}
+
+.segitiga{
+    display: none;
+}
+.persegi{
+    display: none;
+}
+
+.genjar{
+    display: none;
+}
+.lingkaran{
+    display: none;
+}
+.trapesium{
+    display: none;
+}
+.ketupat{
+    display: none;
+}
